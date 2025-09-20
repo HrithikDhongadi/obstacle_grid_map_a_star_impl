@@ -115,9 +115,9 @@ void GridMap::generateRandomMap(double obstacleProb) {
     setGoal(gx, gy);
 }
 
-void GridMap::visualizeWithPath(const std::vector<std::pair<int,int>>& path, int cellSize) const {
+void GridMap::visualizeWithPath(const std::vector<std::vector<std::pair<int,int>>>& paths, int cellSize) const {
     cv::Mat img(height_ * cellSize, width_ * cellSize, CV_8UC3, cv::Scalar(255, 255, 255));
-
+    
     // Draw map
     for (int y = 0; y < height_; ++y) {
         for (int x = 0; x < width_; ++x) {
@@ -136,12 +136,17 @@ void GridMap::visualizeWithPath(const std::vector<std::pair<int,int>>& path, int
         }
     }
 
-    // Draw path
-    for (size_t i = 1; i < path.size(); ++i) {
-        cv::Point p1(path[i-1].first * cellSize + cellSize/2, path[i-1].second * cellSize + cellSize/2);
-        cv::Point p2(path[i].first * cellSize + cellSize/2, path[i].second * cellSize + cellSize/2);
-        cv::line(img, p1, p2, cv::Scalar(255, 0, 0), 2); // blue path
+    for (const auto& path : paths) {
+        
+
+        // Draw path
+        for (size_t i = 1; i < path.size(); ++i) {
+            cv::Point p1(path[i-1].first * cellSize + cellSize/2, path[i-1].second * cellSize + cellSize/2);
+            cv::Point p2(path[i].first * cellSize + cellSize/2, path[i].second * cellSize + cellSize/2);
+            cv::line(img, p1, p2, cv::Scalar(255, 0, 0), 2); // blue path
+        }
     }
+    
 
     cv::imshow("GridMap with Path", img);
     cv::waitKey(0);

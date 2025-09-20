@@ -38,7 +38,7 @@ public:
 
     void print() const;              // ASCII visualizer
     void visualize(int cellSize = 40) const; // OpenCV visualizer
-    void visualizeWithPath(const std::vector<std::pair<int,int>>& path, int cellSize = 40) const;
+    void visualizeWithPath(const std::vector<std::vector<std::pair<int,int>>>& paths, int cellSize = 40) const;
 
 
 private:

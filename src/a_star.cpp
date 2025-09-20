@@ -60,17 +60,17 @@ std::vector<std::pair<int,int>> AStar::findPath(const GridMap& map) {
             }
             path.push_back({sx, sy}); // add start
 
-            // Print Unreversed (Goal to Start) Path Coordinates
-            std::cout << "Unreversed (Goal to Start) Path Coordinates:\n";
-            for (auto& it : path)
-                std::cout << "(" << it.first << ", " << it.second << ")\n";   // print each coordinate
+            // // Print Unreversed (Goal to Start) Path Coordinates
+            // std::cout << "Unreversed (Goal to Start) Path Coordinates:\n";
+            // for (auto& it : path)
+            //     std::cout << "(" << it.first << ", " << it.second << ")\n";   // print each coordinate
 
             std::reverse(path.begin(), path.end()); // start to goal
 
-            // Print Reversed (Start to Goal) Path Coordinates
-            std::cout << "Reversed (Start to Goal) Path Coordinates:\n";
-            for (const auto& p : path)
-                std::cout << "(" << p.first << ", " << p.second << ")\n"; // print each coordinate
+            // // Print Reversed (Start to Goal) Path Coordinates
+            // std::cout << "Reversed (Start to Goal) Path Coordinates:\n";
+            // for (const auto& p : path)
+            //     std::cout << "(" << p.first << ", " << p.second << ")\n"; // print each coordinate
 
             return path;
         }

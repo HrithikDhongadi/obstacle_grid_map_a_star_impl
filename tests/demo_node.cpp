@@ -2,6 +2,9 @@
 #include <queue>
 #include <vector>
 
+// Compile Statement
+// g++ -std=c++17 -o demo_node demo_node.cpp
+
 struct Node {
     int x, y;
     double g, h;
