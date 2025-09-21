@@ -3,6 +3,11 @@ A Star implementation on a randomly generated grid map for the optimized path pl
 
 Final goal is to create a dynamic A Star Implementation of a Object moving towards a goal.
 
+## Prerequisites:
+- C++17 or higher
+- OpenCV 4.x with `sudo apt-get install libopencv-dev` or equivalent for your OS
+
+
 ## Usage:
 
 1. Clone the repository
