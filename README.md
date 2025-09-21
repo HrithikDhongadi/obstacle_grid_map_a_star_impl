@@ -8,6 +8,8 @@ Final goal is to create a dynamic A Star Implementation of a Object moving towar
 1. Clone the repository
     ```bash
     git clone https://github.com/HrithikDhongadi/obstacle_grid_map_a_star_impl.git
+    cd obstacle_grid_map_a_star_impl
+    ```
 2. Compile the code using the provided Makefile or g++ commands in the comments of main.cpp and demo_node.cpp
     - To use the makefile, simply run `make` in the terminal.
     - For main.cpp:
