@@ -28,6 +28,11 @@ std::vector<std::pair<int,int>> AStar::findPath(const GridMap& map) {
         return std::abs(x - gx) + std::abs(y - gy);
     };
 
+    // // Euclidean heuristic
+    // auto heuristic = [&](int x, int y) {
+    //     return std::sqrt((x - gx) * (x - gx) + (y - gy) * (y - gy));
+    // };
+
     std::priority_queue<Node> open;
     std::vector<std::vector<bool>> closed(h, std::vector<bool>(w, false));
     std::vector<std::vector<double>> gScore(h, std::vector<double>(w, std::numeric_limits<double>::infinity()));

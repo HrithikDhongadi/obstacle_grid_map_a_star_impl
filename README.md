@@ -19,7 +19,7 @@ Final goal is to create a dynamic A Star Implementation of a Object moving towar
     - To use the makefile, simply run `make` in the terminal.
     - For main.cpp:
     ```bash
-    g++ -std=c++14 -I/usr/local/include/opencv4 -Iinclude -o main src/main.cpp src/map.cpp src/a_star.cpp -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+    g++ -std=c++17 -I/usr/local/include/opencv4 -Iinclude -o main src/main.cpp src/map.cpp src/a_star.cpp -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
     ```
         
     - For demo_node.cpp:
